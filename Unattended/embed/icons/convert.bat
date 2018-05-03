@@ -1,0 +1,1 @@
+..\tools\png2atf -q0 -c d -i %1.png -o %1.atf

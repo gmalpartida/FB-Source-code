@@ -1,0 +1,28 @@
+This is the AS3 project for Pepsi Spire.
+
+The project is a pure AS3 project using the Flex/AIR SDK and published as a normal ("web") SWF targetting Flash Player 11.8.
+
+The current project is a FDT project - to open it in FDT, just import the folder as a project. FDT is not required, however, as the project can be edited and compiled elsewhere.
+
+It currently uses ASC2 from the (free) AIR SDK version 13.0.0.0083 to compile the project. The complete current command-line for compilation is as such:
+
+bin\mxmlc.bat
+  -output .\trunk\fountain_family\deploy\main.swf
+  -+flexlib=D:\flash\air_13.0.0.0083\frameworks
+  -debug=false
+  -source-path+=.\trunk\fountain_family\lib-src
+  -source-path+=.\trunk\fountain_family\src
+  -library-path+=D:\flash\air_13.0.0.0083\frameworks\libs\player\11.8\playerglobal.swc
+  --frames.frame=two,com.firstborn.pepsi.application.wrapper.ApplicationFrame2
+  -advanced-telemetry=true
+  --target-player=11.8
+  --library-path+=D:\flash\air_13.0.0.0083/frameworks/locale/en_US
+  --default-frame-rate=60
+  --default-background-color=0xffffff
+  --default-size=1080,1920
+  --swf-version=21
+  --compiler.inline=true
+  -define=CONFIG::VERSION,"0.0.0"
+  -define=CONFIG::BUILD_NUMBER,"0"
+  -define=CONFIG::BUILD_DATE,"00"
+  -- .\trunk\fountain_family\src\com\firstborn\pepsi\application\wrapper\ApplicationFrame1.as
